@@ -47,12 +47,16 @@ class TodoTile extends StatelessWidget {
               ),
 
               // Task Name
-              Text(
-                taskName,
-                style: TextStyle(
-                  decoration: isTaskCompleted
-                      ? TextDecoration.lineThrough
-                      : TextDecoration.none,
+              Expanded(
+                child: Text(
+                  taskName,
+                  maxLines: 2, // Limit to 2 lines
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    decoration: isTaskCompleted
+                        ? TextDecoration.lineThrough
+                        : TextDecoration.none,
+                  ),
                 ),
               ),
             ],
