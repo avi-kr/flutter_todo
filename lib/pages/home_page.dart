@@ -79,6 +79,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.yellow[200],
       appBar: AppBar(
+        leading: Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: Image.asset(
+            'assets/icon/logo.png',
+          ),
+        ),
         title: Text("To Do"),
         elevation: 0,
       ),
